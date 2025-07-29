@@ -1,0 +1,9 @@
+{
+    "id": "botble/carento",
+    "name": "Carento",
+    "namespace": "Theme\\Carento\\",
+    "author": "Botble Technologies",
+    "url": "https://botble.com",
+    "description": "Carento - Car Dealer & Rental Booking Laravel System",
+    "required_plugins": []
+}

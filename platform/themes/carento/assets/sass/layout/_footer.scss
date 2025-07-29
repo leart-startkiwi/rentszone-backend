@@ -1,0 +1,125 @@
+.box-info-contact {
+  p {
+    margin-bottom: 19px;
+  }
+}
+.icon-address {
+  padding: 0px 0px 0px 25px;
+  background: url(../images/icons/address.svg) no-repeat left top;
+}
+.icon-worktime {
+  padding: 0px 0px 0px 25px;
+  background: url(../images/icons/hour-work.svg) no-repeat left top 4px;
+}
+.icon-email {
+  padding: 0px 0px 0px 25px;
+  background: url(../images/icons/mail.svg) no-repeat left top 6px;
+}
+.footer-top {
+  border-bottom: 1px solid #5756567d;
+  padding-bottom: 35px;
+  margin-bottom: 49px;
+  img {
+    display: block;
+  }
+}
+.need-help {
+  background: url(../images/icons/phone.svg) no-repeat left center;
+  display: inline-block;
+  padding: 0px 19px 0px 35px;
+  color: var(--bs-color-white);
+}
+a.icon-socials {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  margin-inline-end: 7px;
+  line-height: 40px;
+  text-align: center;
+  img {
+    vertical-align: middle;
+  }
+  svg {
+    path {
+      fill: var(--bs-neutral-0);
+    }
+  }
+  &:last-child {
+    margin-inline-end: 0px;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    transition-duration: 0.2s;
+    svg {
+      path {
+        fill: $brand-2;
+      }
+    }
+  }
+}
+.footer-1 {
+  width: 30%;
+}
+.footer-2 {
+  width: 17.5%;
+}
+.footer-3 {
+  width: 17.5%;
+}
+.footer-4 {
+  width: 17.5%;
+}
+.footer-5 {
+  width: 17.5%;
+}
+.footer {
+  background-color: var(--bs-background-1000);
+  padding: 40px 0px 0px 0px;
+  .phone-support {
+    color: var(--bs-brand-2);
+  }
+  h6 {
+    color: var(--bs-color-white);
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .menu-footer {
+    display: inline-block;
+    li {
+      list-style: none;
+      margin-bottom: 18px;
+      &:last-child {
+        padding-inline-end: 0;
+      }
+      a {
+        color: var(--bs-neutral-400);
+        font-size: 15px;
+        text-decoration: none;
+        transition-duration: 0.2s;
+        line-height: 26px;
+        &:hover {
+          color: var(--bs-neutral-0);
+          transition-duration: 0.2s;
+          padding-inline-start: 3px;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    padding: 30px 0 10px 0;
+    color: var(--bs-neutral-700);
+    font-size: $font-sm;
+    border-top: 1px solid #5756567d;
+    strong {
+      color: var(--bs-brand-1);
+      font-weight: bold;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}

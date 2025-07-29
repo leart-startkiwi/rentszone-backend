@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'Location de Voitures',
+    'currency' => [
+        'title' => 'Devise',
+        'description' => 'Gérer les paramètres de devise pour la Location de Voitures.',
+    ],
+    'invoice' => [
+        'title' => 'Facture',
+        'description' => 'Gérer les paramètres de facture pour la Location de Voitures.',
+        'forms' => [
+            'company_name' => 'Nom de l\'entreprise',
+            'company_address' => 'Adresse de l\'entreprise',
+            'company_email' => 'Email de l\'entreprise',
+            'company_phone' => 'Téléphone de l\'entreprise',
+            'company_logo' => 'Logo de l\'entreprise',
+            'using_custom_font_for_invoice' => 'Utiliser une police personnalisée pour la facture ?',
+            'invoice_font_family' => 'Famille de police pour la facture (Fonctionne uniquement pour les langues latines)',
+            'enable_invoice_stamp' => 'Activer le tampon de facture ?',
+            'invoice_support_arabic_language' => 'Support de la langue arabe dans la facture ?',
+            'invoice_code_prefix' => 'Préfixe du code de facture',
+            'add_language_support' => 'Ajouter le support de langue',
+            'only_latin_languages' => 'Uniquement les langues latines',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'Confirmation de Réservation de Location de Voiture',
+                'booking_confirmation_description' => 'Envoyer un email au client lorsque sa réservation est confirmée',
+                'booking_code' => 'Code de réservation',
+                'customer_name' => 'Nom du client',
+                'customer_phone' => 'Téléphone du client',
+                'customer_email' => 'Email du client',
+                'payment_method' => 'Méthode de paiement',
+                'car_name' => 'Nom de la voiture',
+                'pickup_address' => 'Adresse de prise en charge',
+                'return_address' => 'Adresse de retour',
+                'rental_start_date' => 'Date de début de location',
+                'rental_end_date' => 'Date de fin de location',
+                'amount' => 'Montant',
+                'note' => 'Note',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'Commission',
+        'description' => 'Configurer les paramètres de commission pour la location de voitures',
+        'default_commission_fee' => 'Frais de commission par défaut',
+        'commission_fee_type' => 'Type de frais de commission',
+        'enable_commission_fee_for_each_category' => 'Activer les frais de commission pour chaque catégorie ?',
+        'commission_fee' => 'Frais de commission',
+        'categories' => 'Catégories',
+        'select_categories' => 'Sélectionner les catégories',
+        'add_new' => 'Ajouter nouveau',
+        'commission_fee_each_category_fee_name' => 'Frais de commission pour l\'élément :key',
+        'commission_fee_each_category_name' => 'Catégories pour l\'élément :key',
+    ],
+];

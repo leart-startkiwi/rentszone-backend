@@ -1,0 +1,15 @@
+.form-contact {
+  input[type='text'],
+  input[type='email'] {
+    background-color: var(--bs-background-card);
+  }
+  .btn-book {
+    color: #000000;
+    svg {
+      stroke: #000000;
+    }
+  }
+}
+.box-contact-form {
+  padding: 90px 0px;
+}

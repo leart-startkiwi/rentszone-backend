@@ -1,0 +1,8 @@
+{
+    "name": "botble/car-rentals",
+    "description": "Car Rentals Plugin for Botble CMS",
+    "type": "package",
+    "require": {
+        "khaled.alshamaa/ar-php": "^7.0"
+    }
+}

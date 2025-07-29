@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'Penyewaan Mobil',
+    'currency' => [
+        'title' => 'Mata Uang',
+        'description' => 'Kelola pengaturan mata uang untuk Penyewaan Mobil.',
+    ],
+    'invoice' => [
+        'title' => 'Faktur',
+        'description' => 'Kelola pengaturan faktur untuk Penyewaan Mobil.',
+        'forms' => [
+            'company_name' => 'Nama perusahaan',
+            'company_address' => 'Alamat perusahaan',
+            'company_email' => 'Email perusahaan',
+            'company_phone' => 'Telepon perusahaan',
+            'company_logo' => 'Logo perusahaan',
+            'using_custom_font_for_invoice' => 'Menggunakan font kustom untuk faktur?',
+            'invoice_font_family' => 'Keluarga font faktur (Hanya berfungsi untuk bahasa Latin)',
+            'enable_invoice_stamp' => 'Aktifkan stempel faktur?',
+            'invoice_support_arabic_language' => 'Dukung bahasa Arab di faktur?',
+            'invoice_code_prefix' => 'Awalan kode faktur',
+            'add_language_support' => 'Tambahkan dukungan bahasa',
+            'only_latin_languages' => 'Hanya bahasa Latin',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'Konfirmasi Pemesanan Penyewaan Mobil',
+                'booking_confirmation_description' => 'Kirim email ke pelanggan ketika pemesanan mereka dikonfirmasi',
+                'booking_code' => 'Kode pemesanan',
+                'customer_name' => 'Nama pelanggan',
+                'customer_phone' => 'Telepon pelanggan',
+                'customer_email' => 'Email pelanggan',
+                'payment_method' => 'Metode pembayaran',
+                'car_name' => 'Nama mobil',
+                'pickup_address' => 'Alamat pengambilan',
+                'return_address' => 'Alamat pengembalian',
+                'rental_start_date' => 'Tanggal mulai sewa',
+                'rental_end_date' => 'Tanggal akhir sewa',
+                'amount' => 'Jumlah',
+                'note' => 'Catatan',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'Komisi',
+        'description' => 'Konfigurasi pengaturan komisi untuk penyewaan mobil',
+        'default_commission_fee' => 'Biaya komisi default',
+        'commission_fee_type' => 'Jenis biaya komisi',
+        'enable_commission_fee_for_each_category' => 'Aktifkan biaya komisi untuk setiap kategori?',
+        'commission_fee' => 'Biaya komisi',
+        'categories' => 'Kategori',
+        'select_categories' => 'Pilih kategori',
+        'add_new' => 'Tambah baru',
+        'commission_fee_each_category_fee_name' => 'Biaya komisi untuk item :key',
+        'commission_fee_each_category_name' => 'Kategori untuk item :key',
+    ],
+];

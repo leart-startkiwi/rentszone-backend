@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'تأجير السيارات',
+    'currency' => [
+        'title' => 'العملة',
+        'description' => 'إدارة إعدادات العملة لتأجير السيارات.',
+    ],
+    'invoice' => [
+        'title' => 'الفاتورة',
+        'description' => 'إدارة إعدادات الفاتورة لتأجير السيارات.',
+        'forms' => [
+            'company_name' => 'اسم الشركة',
+            'company_address' => 'عنوان الشركة',
+            'company_email' => 'البريد الإلكتروني للشركة',
+            'company_phone' => 'هاتف الشركة',
+            'company_logo' => 'شعار الشركة',
+            'using_custom_font_for_invoice' => 'استخدام خط مخصص للفاتورة؟',
+            'invoice_font_family' => 'عائلة خط الفاتورة (تعمل فقط للغة اللاتينية)',
+            'enable_invoice_stamp' => 'تمكين ختم الفاتورة؟',
+            'invoice_support_arabic_language' => 'دعم اللغة العربية في الفاتورة؟',
+            'invoice_code_prefix' => 'بادئة رمز الفاتورة',
+            'add_language_support' => 'إضافة دعم اللغة',
+            'only_latin_languages' => 'اللغات اللاتينية فقط',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'تأكيد حجز تأجير السيارة',
+                'booking_confirmation_description' => 'إرسال بريد إلكتروني إلى العميل عند تأكيد حجزه',
+                'booking_code' => 'رمز الحجز',
+                'customer_name' => 'اسم العميل',
+                'customer_phone' => 'هاتف العميل',
+                'customer_email' => 'بريد العميل الإلكتروني',
+                'payment_method' => 'طريقة الدفع',
+                'car_name' => 'اسم السيارة',
+                'pickup_address' => 'عنوان الاستلام',
+                'return_address' => 'عنوان الإرجاع',
+                'rental_start_date' => 'تاريخ بدء الإيجار',
+                'rental_end_date' => 'تاريخ انتهاء الإيجار',
+                'amount' => 'المبلغ',
+                'note' => 'ملاحظة',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'العمولة',
+        'description' => 'تكوين إعدادات العمولة لتأجير السيارات',
+        'default_commission_fee' => 'رسوم العمولة الافتراضية',
+        'commission_fee_type' => 'نوع رسوم العمولة',
+        'enable_commission_fee_for_each_category' => 'تمكين رسوم العمولة لكل فئة؟',
+        'commission_fee' => 'رسوم العمولة',
+        'categories' => 'الفئات',
+        'select_categories' => 'اختر الفئات',
+        'add_new' => 'إضافة جديد',
+        'commission_fee_each_category_fee_name' => 'رسوم العمولة للعنصر :key',
+        'commission_fee_each_category_name' => 'الفئات للعنصر :key',
+    ],
+];

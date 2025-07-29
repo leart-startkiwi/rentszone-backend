@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'कार किराया',
+    'currency' => [
+        'title' => 'मुद्रा',
+        'description' => 'कार किराया के लिए मुद्रा सेटिंग्स प्रबंधित करें।',
+    ],
+    'invoice' => [
+        'title' => 'चालान',
+        'description' => 'कार किराया के लिए चालान सेटिंग्स प्रबंधित करें।',
+        'forms' => [
+            'company_name' => 'कंपनी का नाम',
+            'company_address' => 'कंपनी का पता',
+            'company_email' => 'कंपनी का ईमेल',
+            'company_phone' => 'कंपनी का फोन',
+            'company_logo' => 'कंपनी का लोगो',
+            'using_custom_font_for_invoice' => 'चालान के लिए कस्टम फॉन्ट का उपयोग करें?',
+            'invoice_font_family' => 'चालान फॉन्ट परिवार (केवल लैटिन भाषा के लिए काम करता है)',
+            'enable_invoice_stamp' => 'चालान स्टाम्प सक्षम करें?',
+            'invoice_support_arabic_language' => 'चालान में अरबी भाषा का समर्थन करें?',
+            'invoice_code_prefix' => 'चालान कोड प्रीफिक्स',
+            'add_language_support' => 'भाषा समर्थन जोड़ें',
+            'only_latin_languages' => 'केवल लैटिन भाषाएँ',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'कार किराया बुकिंग पुष्टिकरण',
+                'booking_confirmation_description' => 'जब उनकी बुकिंग की पुष्टि हो जाती है तो ग्राहक को ईमेल भेजें',
+                'booking_code' => 'बुकिंग कोड',
+                'customer_name' => 'ग्राहक का नाम',
+                'customer_phone' => 'ग्राहक का फोन',
+                'customer_email' => 'ग्राहक का ईमेल',
+                'payment_method' => 'भुगतान विधि',
+                'car_name' => 'कार का नाम',
+                'pickup_address' => 'पिकअप पता',
+                'return_address' => 'वापसी पता',
+                'rental_start_date' => 'किराया प्रारंभ तिथि',
+                'rental_end_date' => 'किराया समाप्ति तिथि',
+                'amount' => 'राशि',
+                'note' => 'नोट',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'कमीशन',
+        'description' => 'कार किराया के लिए कमीशन सेटिंग्स कॉन्फ़िगर करें',
+        'default_commission_fee' => 'डिफ़ॉल्ट कमीशन शुल्क',
+        'commission_fee_type' => 'कमीशन शुल्क प्रकार',
+        'enable_commission_fee_for_each_category' => 'प्रत्येक श्रेणी के लिए कमीशन शुल्क सक्षम करें?',
+        'commission_fee' => 'कमीशन शुल्क',
+        'categories' => 'श्रेणियां',
+        'select_categories' => 'श्रेणियां चुनें',
+        'add_new' => 'नया जोड़ें',
+        'commission_fee_each_category_fee_name' => 'आइटम :key के लिए कमीशन शुल्क',
+        'commission_fee_each_category_name' => 'आइटम :key के लिए श्रेणियां',
+    ],
+];

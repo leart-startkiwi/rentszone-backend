@@ -1,0 +1,35 @@
+.booking-form {
+    .border-wrapper-after {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 15px;
+    }
+
+    .pricing-summary {
+    }
+    .pricing-summary .row {
+        margin-bottom: 5px;
+    }
+    .pricing-summary .total {
+        font-weight: bold;
+    }
+}
+
+.availability-check {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+
+    input {
+        text-align: center;
+    }
+}
+
+.btn-check-availability {
+    background-color: #79553d;
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: #5d412e;
+    }
+}

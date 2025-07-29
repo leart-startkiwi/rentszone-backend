@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'Araç Kiralama',
+    'currency' => [
+        'title' => 'Para Birimi',
+        'description' => 'Araç Kiralama için para birimi ayarlarını yönetin.',
+    ],
+    'invoice' => [
+        'title' => 'Fatura',
+        'description' => 'Araç Kiralama için fatura ayarlarını yönetin.',
+        'forms' => [
+            'company_name' => 'Şirket adı',
+            'company_address' => 'Şirket adresi',
+            'company_email' => 'Şirket e-postası',
+            'company_phone' => 'Şirket telefonu',
+            'company_logo' => 'Şirket logosu',
+            'using_custom_font_for_invoice' => 'Fatura için özel yazı tipi kullanılsın mı?',
+            'invoice_font_family' => 'Fatura yazı tipi ailesi (Yalnızca Latin dilleri için çalışır)',
+            'enable_invoice_stamp' => 'Fatura damgası etkinleştirilsin mi?',
+            'invoice_support_arabic_language' => 'Faturada Arapça dil desteği?',
+            'invoice_code_prefix' => 'Fatura kodu öneki',
+            'add_language_support' => 'Dil desteği ekle',
+            'only_latin_languages' => 'Yalnızca Latin dilleri',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'Araç Kiralama Rezervasyon Onayı',
+                'booking_confirmation_description' => 'Rezervasyonları onaylandığında müşteriye e-posta gönder',
+                'booking_code' => 'Rezervasyon kodu',
+                'customer_name' => 'Müşteri adı',
+                'customer_phone' => 'Müşteri telefonu',
+                'customer_email' => 'Müşteri e-postası',
+                'payment_method' => 'Ödeme yöntemi',
+                'car_name' => 'Araç adı',
+                'pickup_address' => 'Alış adresi',
+                'return_address' => 'İade adresi',
+                'rental_start_date' => 'Kiralama başlangıç tarihi',
+                'rental_end_date' => 'Kiralama bitiş tarihi',
+                'amount' => 'Tutar',
+                'note' => 'Not',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'Komisyon',
+        'description' => 'Araç kiralama için komisyon ayarlarını yapılandırın',
+        'default_commission_fee' => 'Varsayılan komisyon ücreti',
+        'commission_fee_type' => 'Komisyon ücreti türü',
+        'enable_commission_fee_for_each_category' => 'Her kategori için komisyon ücreti etkinleştirilsin mi?',
+        'commission_fee' => 'Komisyon ücreti',
+        'categories' => 'Kategoriler',
+        'select_categories' => 'Kategorileri seçin',
+        'add_new' => 'Yeni ekle',
+        'commission_fee_each_category_fee_name' => 'Öğe :key için komisyon ücreti',
+        'commission_fee_each_category_name' => 'Öğe :key için kategoriler',
+    ],
+];

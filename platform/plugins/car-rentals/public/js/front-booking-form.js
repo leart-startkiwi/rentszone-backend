@@ -1,0 +1,1 @@
+$(document).ready((function(){$(document).on("change",".booking-form input, .booking-form select",(function(){var n,o;n=$(".booking-form").find("form"),o=n.serialize(),$.ajax({url:n.attr("data-estimate-url"),method:"POST",data:o,success:function(o){n.find(".pricing-summary").html(o.data)}})}))}));

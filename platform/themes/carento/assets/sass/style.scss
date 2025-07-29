@@ -1,0 +1,84 @@
+/***
+ Theme Name: Carento
+ Description: Car rental HTML template
+ Version: 1.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.htm
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
+
+// Configuration and helpers
+// prettier-ignore
+@import 'abstracts/variables',
+'abstracts/root',
+'abstracts/functions',
+'abstracts/mixins';
+
+// Base stuff
+// prettier-ignore
+@import 'base/common',
+'base/animation',
+'base/typography';
+
+// Components
+// prettier-ignore
+@import 'components/buttons',
+'components/form',
+'components/card',
+'components/tabs',
+'components/misc',
+'components/noUISlider',
+'components/slider',
+'components/banners';
+
+// Themes
+@import 'themes/default';
+
+// Layout-related sections
+// prettier-ignore
+@import 'layout/header',
+'layout/navigation',
+'layout/sidebar',
+'layout/footer',
+'layout/spacing';
+
+// Page-specific styles
+// prettier-ignore
+@import 'pages/home-1',
+'pages/rental-car',
+'pages/blog',
+'pages/contact',
+'pages/pages';
+
+// Responsive
+@import 'layout/responsive';
+
+@import 'responsive';
+
+@import 'custom';
+
+@import 'custom-light';
+
+@import 'custom-dark';
+
+@import 'rtl';

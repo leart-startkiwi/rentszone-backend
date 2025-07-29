@@ -1,0 +1,184 @@
+[data-bs-theme='light'] {
+    body {
+        color: var(--text-color) !important;
+
+        .content-detail-post p {
+            color: var(--text-color) !important;
+        }
+
+        .neutral-500 {
+            color: var(--text-color) !important;
+        };
+    }
+
+    h1, h2, h3, h4, h5, h6, .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+        color: var(--heading-color) !important;
+
+        &.text-white {
+            color: var(--bs-color-white) !important;
+        }
+
+        &.color-white {
+            color: var(--bs-color-white) !important
+        }
+    }
+
+    .bg-2 {
+        background-color: var(--primary-badge-background-color) !important;
+    }
+
+    .form-check-input {
+        &:checked {
+            background-color: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+        }
+    }
+
+    .header {
+        a, svg, span {
+            color: var(--text-color) !important;
+        }
+
+        a.text-white {
+            color: var(--bs-color-white) !important;
+
+            svg, span {
+                color: var(--bs-color-white) !important;
+            }
+        }
+
+        .head-lang {
+            span {
+                color: var(--bs-color-white) !important;
+            }
+
+            a {
+                span {
+                    color: var(--bs-neutral-1000) !important;
+                }
+
+                &:hover {
+                    span {
+                        color: var(--primary-color-hover) !important;
+                    }
+                }
+            }
+        }
+
+        .head-currency {
+            span {
+                color: var(--bs-color-white) !important;
+            }
+
+            a {
+                color: var(--bs-neutral-1000) !important;
+
+                span {
+                    color: var(--bs-neutral-1000) !important;
+                }
+
+                &:hover {
+                    span {
+                        color: var(--primary-color-hover) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    a.header-login-btn.neutral-1000 {
+        svg {
+            path {
+                fill: var(--text-color) !important;
+            }
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: var(--bs-neutral-900) !important;
+                }
+            }
+        }
+    }
+
+    a.neutral-1000 {
+        &:hover {
+            svg {
+                path {
+                    fill: var(--primary-color-hover) !important;
+                }
+            }
+        }
+    }
+
+    .card-rating, .rate-element {
+        .rating {
+            svg {
+                color: var(--primary-color) !important;
+            }
+
+            span {
+                color: var(--text-color);
+            }
+        }
+    }
+
+    .page-default-content .ck-content p {
+        color: var(--text-color) !important;
+
+        &.text-white {
+            color: var(--bs-color-white) !important;
+        }
+    }
+
+    .header-transparent {
+        a, span, svg {
+            color: var(--bs-color-white) !important;
+        }
+
+        a.header-login-btn.neutral-1000 svg path {
+            fill: var(--bs-color-white) !important;
+        }
+
+        a.neutral-1000 {
+            &:hover {
+                svg {
+                    path {
+                        fill: var(--bs-neutral-900) !important;
+                    }
+                }
+            }
+        }
+
+        ul.main-menu {
+            li.has-children {
+                ul.sub-menu {
+                    li {
+                        a {
+                            color: var(--bs-neutral-900) !important;
+
+                            &:hover {
+                                color: var(--primary-color-hover) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dropdown-login {
+        ul.dropdown-menu {
+            li {
+                a {
+                    color: var(--bs-neutral-1000) !important;
+
+                    span {
+                        color: var(--bs-neutral-1000) !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'Alquiler de Coches',
+    'currency' => [
+        'title' => 'Moneda',
+        'description' => 'Administrar configuración de moneda para Alquiler de Coches.',
+    ],
+    'invoice' => [
+        'title' => 'Factura',
+        'description' => 'Administrar configuración de factura para Alquiler de Coches.',
+        'forms' => [
+            'company_name' => 'Nombre de la empresa',
+            'company_address' => 'Dirección de la empresa',
+            'company_email' => 'Correo electrónico de la empresa',
+            'company_phone' => 'Teléfono de la empresa',
+            'company_logo' => 'Logo de la empresa',
+            'using_custom_font_for_invoice' => '¿Usar fuente personalizada para factura?',
+            'invoice_font_family' => 'Familia de fuente para factura (Solo funciona para idiomas latinos)',
+            'enable_invoice_stamp' => '¿Habilitar sello de factura?',
+            'invoice_support_arabic_language' => '¿Soporte para idioma árabe en factura?',
+            'invoice_code_prefix' => 'Prefijo de código de factura',
+            'add_language_support' => 'Agregar soporte de idioma',
+            'only_latin_languages' => 'Solo idiomas latinos',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'Confirmación de Reserva de Alquiler de Coche',
+                'booking_confirmation_description' => 'Enviar correo electrónico al cliente cuando su reserva es confirmada',
+                'booking_code' => 'Código de reserva',
+                'customer_name' => 'Nombre del cliente',
+                'customer_phone' => 'Teléfono del cliente',
+                'customer_email' => 'Correo electrónico del cliente',
+                'payment_method' => 'Método de pago',
+                'car_name' => 'Nombre del coche',
+                'pickup_address' => 'Dirección de recogida',
+                'return_address' => 'Dirección de devolución',
+                'rental_start_date' => 'Fecha de inicio del alquiler',
+                'rental_end_date' => 'Fecha de finalización del alquiler',
+                'amount' => 'Monto',
+                'note' => 'Nota',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'Comisión',
+        'description' => 'Configurar ajustes de comisión para alquiler de coches',
+        'default_commission_fee' => 'Tarifa de comisión predeterminada',
+        'commission_fee_type' => 'Tipo de tarifa de comisión',
+        'enable_commission_fee_for_each_category' => '¿Habilitar tarifa de comisión para cada categoría?',
+        'commission_fee' => 'Tarifa de comisión',
+        'categories' => 'Categorías',
+        'select_categories' => 'Seleccionar categorías',
+        'add_new' => 'Agregar nuevo',
+        'commission_fee_each_category_fee_name' => 'Tarifa de comisión para ítem :key',
+        'commission_fee_each_category_name' => 'Categorías para ítem :key',
+    ],
+];

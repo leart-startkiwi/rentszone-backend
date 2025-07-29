@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'গাড়ি ভাড়া',
+    'currency' => [
+        'title' => 'মুদ্রা',
+        'description' => 'গাড়ি ভাড়ার জন্য মুদ্রা সেটিংস পরিচালনা করুন।',
+    ],
+    'invoice' => [
+        'title' => 'চালান',
+        'description' => 'গাড়ি ভাড়ার জন্য চালান সেটিংস পরিচালনা করুন।',
+        'forms' => [
+            'company_name' => 'কোম্পানির নাম',
+            'company_address' => 'কোম্পানির ঠিকানা',
+            'company_email' => 'কোম্পানির ইমেইল',
+            'company_phone' => 'কোম্পানির ফোন',
+            'company_logo' => 'কোম্পানির লোগো',
+            'using_custom_font_for_invoice' => 'চালানের জন্য কাস্টম ফন্ট ব্যবহার করবেন?',
+            'invoice_font_family' => 'চালান ফন্ট ফ্যামিলি (শুধুমাত্র ল্যাটিন ভাষার জন্য কাজ করে)',
+            'enable_invoice_stamp' => 'চালান স্ট্যাম্প সক্ষম করবেন?',
+            'invoice_support_arabic_language' => 'চালানে আরবি ভাষা সমর্থন করবেন?',
+            'invoice_code_prefix' => 'চালান কোড প্রিফিক্স',
+            'add_language_support' => 'ভাষা সমর্থন যোগ করুন',
+            'only_latin_languages' => 'শুধুমাত্র ল্যাটিন ভাষা',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'গাড়ি ভাড়া বুকিং নিশ্চিতকরণ',
+                'booking_confirmation_description' => 'তাদের বুকিং নিশ্চিত হলে গ্রাহকদের ইমেইল পাঠান',
+                'booking_code' => 'বুকিং কোড',
+                'customer_name' => 'গ্রাহকের নাম',
+                'customer_phone' => 'গ্রাহকের ফোন',
+                'customer_email' => 'গ্রাহকের ইমেইল',
+                'payment_method' => 'পেমেন্ট পদ্ধতি',
+                'car_name' => 'গাড়ির নাম',
+                'pickup_address' => 'পিকআপ ঠিকানা',
+                'return_address' => 'ফেরত ঠিকানা',
+                'rental_start_date' => 'ভাড়া শুরুর তারিখ',
+                'rental_end_date' => 'ভাড়া শেষের তারিখ',
+                'amount' => 'পরিমাণ',
+                'note' => 'নোট',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'কমিশন',
+        'description' => 'গাড়ি ভাড়ার জন্য কমিশন সেটিংস কনফিগার করুন',
+        'default_commission_fee' => 'ডিফল্ট কমিশন ফি',
+        'commission_fee_type' => 'কমিশন ফি ধরন',
+        'enable_commission_fee_for_each_category' => 'প্রতিটি বিভাগের জন্য কমিশন ফি সক্ষম করবেন?',
+        'commission_fee' => 'কমিশন ফি',
+        'categories' => 'বিভাগসমূহ',
+        'select_categories' => 'বিভাগ নির্বাচন করুন',
+        'add_new' => 'নতুন যোগ করুন',
+        'commission_fee_each_category_fee_name' => 'আইটেম :key এর জন্য কমিশন ফি',
+        'commission_fee_each_category_name' => 'আইটেম :key এর জন্য বিভাগসমূহ',
+    ],
+];

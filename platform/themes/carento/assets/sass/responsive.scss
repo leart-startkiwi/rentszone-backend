@@ -1,0 +1,70 @@
+@media screen and (max-width: 480px) {
+    .widget-newsletter {
+        .form-newsletter {
+            flex-wrap: wrap;
+            gap: 10px;
+
+            input#newsletter-email {
+                margin-inline-end: unset;
+            }
+
+            .form-control {
+                max-width: unset;
+            }
+
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    :root {
+        --h1-size: 42px;
+        --h2-size: 36px;
+        --h3-size: 32px;
+        --h4-size: 28px;
+        --h5-size: 24px;
+        --h6-size: 20px;
+        --body-size: 14px;
+    }
+
+    .post-detail-page {
+        .section-box.pt-96 {
+            padding-top: 40px !important;
+        }
+
+        .box-share {
+            .d-flex {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    }
+
+    .letter-btn {
+        width: 35px;
+        height: 35px;
+        margin: 3px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+    .top-bar-2 .text-header-info .phone-head, .top-bar-2 .text-header-info a {
+        min-width: 20px !important;
+    }
+}
+

@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'name' => 'Thuê Xe',
+    'currency' => [
+        'title' => 'Tiền tệ',
+        'description' => 'Quản lý cài đặt tiền tệ cho Thuê Xe.',
+    ],
+    'invoice' => [
+        'title' => 'Hóa đơn',
+        'description' => 'Quản lý cài đặt hóa đơn cho Thuê Xe.',
+        'forms' => [
+            'company_name' => 'Tên công ty',
+            'company_address' => 'Địa chỉ công ty',
+            'company_email' => 'Email công ty',
+            'company_phone' => 'Điện thoại công ty',
+            'company_logo' => 'Logo công ty',
+            'using_custom_font_for_invoice' => 'Sử dụng font tùy chỉnh cho hóa đơn?',
+            'invoice_font_family' => 'Font hóa đơn (Chỉ hoạt động cho ngôn ngữ Latin)',
+            'enable_invoice_stamp' => 'Bật dấu hóa đơn?',
+            'invoice_support_arabic_language' => 'Hỗ trợ tiếng Ả Rập trong hóa đơn?',
+            'invoice_code_prefix' => 'Tiền tố mã hóa đơn',
+            'add_language_support' => 'Thêm hỗ trợ ngôn ngữ',
+            'only_latin_languages' => 'Chỉ ngôn ngữ Latin',
+        ],
+    ],
+    'email' => [
+        'templates' => [
+            'booking_confirm' => [
+                'booking_confirmation_title' => 'Xác nhận Đặt Thuê Xe',
+                'booking_confirmation_description' => 'Gửi email cho khách hàng khi đặt xe của họ được xác nhận',
+                'booking_code' => 'Mã đặt xe',
+                'customer_name' => 'Tên khách hàng',
+                'customer_phone' => 'Điện thoại khách hàng',
+                'customer_email' => 'Email khách hàng',
+                'payment_method' => 'Phương thức thanh toán',
+                'car_name' => 'Tên xe',
+                'pickup_address' => 'Địa chỉ đón',
+                'return_address' => 'Địa chỉ trả',
+                'rental_start_date' => 'Ngày bắt đầu thuê',
+                'rental_end_date' => 'Ngày kết thúc thuê',
+                'amount' => 'Số tiền',
+                'note' => 'Ghi chú',
+            ],
+        ],
+    ],
+    'commission' => [
+        'title' => 'Hoa hồng',
+        'description' => 'Cấu hình cài đặt hoa hồng cho thuê xe',
+        'default_commission_fee' => 'Phí hoa hồng mặc định',
+        'commission_fee_type' => 'Loại phí hoa hồng',
+        'enable_commission_fee_for_each_category' => 'Bật phí hoa hồng cho từng danh mục?',
+        'commission_fee' => 'Phí hoa hồng',
+        'categories' => 'Danh mục',
+        'select_categories' => 'Chọn danh mục',
+        'add_new' => 'Thêm mới',
+        'commission_fee_each_category_fee_name' => 'Phí hoa hồng cho mục :key',
+        'commission_fee_each_category_name' => 'Danh mục cho mục :key',
+    ],
+];

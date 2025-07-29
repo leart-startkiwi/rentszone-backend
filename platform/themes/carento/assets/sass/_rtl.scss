@@ -1,0 +1,359 @@
+body[dir='rtl'] {
+    .header {
+        .main-menu {
+            li.has-children {
+                a {
+                    &:after {
+                        right: unset;
+                        left: auto;
+                        top: 27px;
+                        margin-inline-start: 5px;
+                    }
+                }
+            }
+        }
+
+        .header-right {
+            .btn-signin {
+                svg {
+                    margin-inline-end: 2px;
+                }
+            }
+        }
+    }
+
+    .shortcode-hero-banner.block-banner-home1 {
+        .list-ticks-green {
+            li {
+                background-position-x: 100%;
+                padding: 3px 36px 3px 25px;
+            }
+        }
+    }
+
+    .shortcode-car-advance-search {
+        .box-search-advance {
+            .box-calendar-date {
+                .search-input {
+                    background-position-x: 100%;
+                    text-align: end;
+                    padding-inline-end: 22px !important;
+                }
+
+                &:before {
+                    left: 10px;
+                    right: unset;
+                }
+            }
+
+            .btn-dropdown-search.location-search {
+                background-position-x: 100%;
+                padding: 5px 40px 5px 50px;
+
+                &:after {
+                    left: 10px;
+                    right: unset;
+                }
+            }
+        }
+    }
+
+    .shortcode-brands.brand-style-1 {
+        a {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .card-journey-small {
+        .card-info {
+            .card-program {
+                .card-location {
+                    .text-location {
+                        background-position-x: 100%;
+                    }
+                }
+
+                .card-facilities {
+                    p {
+                        background-position-x: 100%;
+                        padding: 0 30px 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-box.box-flights,
+    .shortcode-car-types,
+    .shortcode-trusted-expertise,
+    .shortcode-cars-by-locations,
+    .shortcode-simple-banners,
+    .shortcode-intro-video-style-2,
+    .shortcode-about-us-information,
+    .shortcode-slider,
+    .shortcode-featured-block-style-2 {
+        .btn-primary {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .list-ticks-green {
+        li {
+            background-position-x: 100%;
+            padding: 3px 36px 3px 25px;
+        }
+    }
+
+    .shortcode-intro-video {
+        .popup-youtube {
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            right: unset !important;
+            bottom: unset !important;
+        }
+    }
+
+    .shortcode-car-types, .shortcode-cars-by-locations {
+        .card-button {
+            a {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .shortcode-cars-by-locations {
+        .card-info.background-card {
+            left: 24px;
+        }
+    }
+
+    .shortcode-simple-banners {
+        .box-banner-1 {
+            .banner-images {
+                img {
+                    left: -100px !important;
+                }
+            }
+        }
+    }
+
+    .shortcode-blog-posts {
+        .card-news {
+            .card-meta {
+                span {
+                    background-position-x: 100%;
+                    padding: 0 20px 0 16px;
+                }
+            }
+        }
+    }
+
+    .widget-newsletter {
+        .subscribe-form {
+            #newsletter-email {
+                margin-inline-start: 8px;
+                margin-inline-end: unset;
+            }
+        }
+    }
+
+    .sidebar-canvas-wrapper {
+        right: unset;
+        left: 0;
+    }
+
+    .burger-icon {
+        right: unset !important;
+        left: 0 !important;
+    }
+
+    .mobile-header-active.mobile-header-wrapper-style {
+        right: unset !important;
+        left: 0 !important;
+
+        .mobile-header-content-area {
+            .mobile-menu {
+                span.menu-expand {
+                    right: unset !important;
+                    left: 0 !important;
+                }
+            }
+        }
+    }
+
+    .breadcrumb__area, .page-header  {
+        .bg-overlay {
+            &:after {
+                width: 100% !important;
+            }
+        }
+
+        span {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+
+        .top-100.start-50 {
+            right: unset!important;
+            left: 50%!important;
+            transform: translateX(-50%) translateY(-50%) !important;
+        }
+    }
+
+    .box-posts-grid-2 {
+        .card-blog {
+            .card-info {
+                width: 100%;
+            }
+        }
+    }
+
+    .card-news {
+        .card-info {
+            .card-meta {
+                .post-views, .post-time, .post-date {
+                    background-position-x: 100%;
+                    padding: 0 22px 0 16px;
+                }
+            }
+        }
+    }
+
+    .list-posts {
+        .card-post {
+            .card-info {
+                .post-date {
+                    background-position-x: 100%;
+                    padding: 0 22px 0 16px;
+                }
+            }
+        }
+    }
+
+    .box-search-style-2 {
+        .btn-search-submit {
+            left: 20px;
+            right: unset;
+        }
+    }
+
+    .booking-form {
+        .input-calendar {
+            svg {
+                left: 15px;
+                right: unset;
+            }
+        }
+
+        .fieldset-for-multi-check-list {
+            .multi-check-list-wrapper {
+                .form-check-label {
+                    padding-right: 35px;
+                }
+            }
+        }
+    }
+
+    .shortcode-testimonial {
+        .block-testimonials {
+            padding-left: unset !important;
+        }
+    }
+
+    .container-search-advance {
+        inset-inline-start: 0;
+        left: 0;
+    }
+
+    .shortcode-slider-style-2 {
+        .item-banner-slide-review {
+            &:after {
+                width: 100% !important;
+            }
+        }
+
+        .box-button-slider-team {
+            .swiper-button-prev {
+                margin-left: 20px !important;
+            }
+        }
+    }
+
+    .widget-newsletter {
+        .justify-content-md-end {
+            gap: 10px;
+
+            #newsletter-email {
+                height: 60px;
+            }
+        }
+    }
+
+    .shortcode-pricing {
+        .btn-primary2 {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .car-detail-page {
+        .box-breadcrumb {
+            .breadcrumbs {
+                li {
+                    span.arrow-right {
+                        left: 15px;
+                        right: unset;
+                        transform: rotate(180deg);
+                        top: 2px;
+                    }
+                }
+            }
+        }
+
+        .box-banner-activities {
+            .slick-arrow {
+                &.slick-next {
+                    right: unset;
+                    left: 38px;
+                }
+            }
+        }
+    }
+
+    .page-loader {
+        &:after {
+            left: 50% !important;
+            inset-inline-start: unset !important;
+        }
+    }
+
+    .phone-support {
+        text-align: end;
+    }
+
+    .form-contact .btn-book,
+    .swiper-button-prev,
+    .swiper-button-next {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .svg-icon-arrow {
+        transform: rotate(180deg);
+    }
+
+    #scrollUp {
+        right: auto;
+        left: 30px;
+    }
+}
