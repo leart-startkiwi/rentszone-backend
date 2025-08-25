@@ -33,7 +33,9 @@ class ResetPasswordNotification extends Notification implements ShouldQueue
                 'customer_name' => $notifiable->name,
             ]);
 
+        // Force the mailer to use SMTP
         return (new MailMessage())
+            ->mailer('smtp')
             ->view(['html' => new HtmlString($emailHandler->getContent())])
             ->subject($emailHandler->getSubject());
     }

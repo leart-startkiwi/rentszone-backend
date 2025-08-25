@@ -7,7 +7,8 @@ use Botble\Base\Rules\EmailRule;
 use Botble\CarRentals\Models\Customer;
 use Botble\Support\Http\Requests\Request;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class RegisterRequest extends Request
 {
@@ -33,11 +34,13 @@ class RegisterRequest extends Request
             $rules['agree_terms_and_policy'] = ['required', 'accepted:1'];
         }
 
-         if (request()->is('api/*')) {
-             \Log::info('leart37');
-        return $rules;
-    }
+        // Skip captcha and additional filters for API requests
+        if (request()->is('api/*')) {
+            \Log::info('API request detected - skipping captcha and filters');
+            return $rules;
+        }
 
+        // Only apply filters (which include captcha) for web requests
         return apply_filters('car_rentals_customer_registration_form_validation_rules', $rules);
     }
 
@@ -55,5 +58,28 @@ class RegisterRequest extends Request
     public function messages(): array
     {
         return apply_filters('car_rentals_customer_registration_form_validation_messages', []);
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = $validator->errors();
+
+        // Check if the email is already taken
+        if ($errors->has('email') && str_contains(strtolower($errors->first('email')), 'taken')) {
+            throw new HttpResponseException(
+                response()->json([
+                    'message' => $errors->first('email'),
+                    'errors' => $errors,
+                ], 409)
+            );
+        }
+
+ // Default behavior for other validation errors
+        throw new HttpResponseException(
+            response()->json([
+                'message' => $errors->first(),
+                'errors' => $errors,
+            ], 422)
+        );
     }
 }

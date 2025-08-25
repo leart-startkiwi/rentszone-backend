@@ -24,11 +24,16 @@ abstract class Captcha
     abstract public function verify(string $response, string $clientIp, array $options = []): bool;
 
     abstract public function display(array $attributes = [], array $options = []): ?string;
-
-    public function rules(): array
+    
+   public function rules(): array
     {
-       return [];
+        if (! $this->reCaptchaEnabled()) {
+            return [];
+        }
+
+        return [self::RECAPTCHA_INPUT_NAME => ['required', 'captcha']];
     }
+
 
     public function isEnabled(): bool
     {
