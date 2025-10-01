@@ -54,8 +54,10 @@ Route::group(['prefix' => 'v1'], function() {
         Route::post('cars/{id}/update', [CarController::class, 'patch']);
         Route::get('cars/myCars', [CarController::class, 'myCars']);
         Route::get('cars/my-car/{id}', [CarController::class, 'getMyCarDetails']);
-        Route::get('vendor-messages', [MessageController::class, 'getMessages']);
+        Route::get('messages/conversations', [MessageController::class, 'getConversations']);
         Route::patch('messages/{id}', [MessageController::class, 'markAsRead']);
+        Route::get('messages/unread-count', [MessageController::class, 'getUnreadMessagesCount']);
+        Route::get('messages/conversation-details', [MessageController::class, 'getConversationDetails']);
         Route::post('bookings', [BookingController::class, 'createBooking']);
         Route::post('reviews', [ReviewController::class, 'store']);
         Route::get('my-bookings', [BookingController::class, 'getMyBookings']);

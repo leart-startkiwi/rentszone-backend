@@ -24,6 +24,7 @@ class Message extends BaseModel
         'content',
         'ip_address',
         'status',
+        'last_sender_id'
     ];
 
     protected $casts = [

@@ -342,6 +342,8 @@ $averageRating = $averageRating
     
     // Set the vendor_id to the current authenticated user
     $car->vendor_id = $user->id;
+    $car->author_id = $user->id;
+
 
     // Explicitly set specific fields to ensure they are saved
     if ($request->has('mileage')) {
@@ -796,7 +798,8 @@ public function getCarDetails($id)
                 'cr_cars.reject_reason',
                 'cr_cars.make_id',
                 'cr_cars.pick_address_id',
-                'cr_cars.return_address_id'
+                'cr_cars.return_address_id',
+                'cr_cars.content'
             ])
             ->leftJoin('cr_car_fuels', 'cr_cars.fuel_type_id', '=', 'cr_car_fuels.id')
             ->leftJoin('cr_customers', 'cr_cars.vendor_id', '=', 'cr_customers.id')
@@ -909,7 +912,8 @@ public function getCarDetails($id)
             'reject_reason' => $car->reject_reason,
             'make_id' => $car->make_id,
             'pick_address_id' => $car->pick_address_id,
-            'return_address_id' => $car->return_address_id
+            'return_address_id' => $car->return_address_id,
+            'content' => $car->content
         ]);
     } catch (\Exception $e) {
         return response()->json([

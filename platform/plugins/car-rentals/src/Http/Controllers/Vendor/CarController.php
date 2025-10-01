@@ -46,6 +46,7 @@ class CarController extends BaseController
             $car->fill(array_merge($this->processRequestData($request), [
                 'author_id' => auth('customer')->id(),
                 'author_type' => Customer::class,
+                'vendor_id' => auth('customer')->id(),
             ]));
 
             if (! CarRentalsHelper::isEnabledPostApproval()) {
