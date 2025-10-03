@@ -112,6 +112,11 @@ public function index(Request $request)
             $query->where('cr_cars.return_address_id', $request->input('return_address_id'));
         }
 
+        // Vendor Filter
+        if ($request->has('vendor_id')) {
+            $query->where('cr_cars.vendor_id', $request->input('vendor_id'));
+        }
+
         // Date Range Filter for Availability
         if ($request->has('start_date') || $request->has('end_date')) {
             $startDate = $request->input('start_date');

@@ -134,4 +134,77 @@ class UserController extends Controller
             ], 500);
         }
     }
+
+    public function getVendors(Request $request): JsonResponse
+    {
+        try {
+            // Get vendors with their location details
+            $query = Customer::select([
+                'cr_customers.id',
+                'cr_customers.name',
+                'cr_customers.avatar',
+                'cr_customers.phone',
+                'cr_customers.email',
+                'cr_customers.location',
+                'cr_car_addresses.detail_address as location_name'
+            ])
+            ->leftJoin('cr_car_addresses', 'cr_customers.location', '=', 'cr_car_addresses.id')
+            ->where('cr_customers.is_vendor', 1);
+
+            // Filter by location if provided
+            if ($request->has('location') && $request->input('location')) {
+                $query->where('cr_customers.location', $request->input('location'));
+            }
+
+            $vendors = $query->get();
+
+            // Transform vendors with car count and average rating
+            $vendorsWithStats = $vendors->map(function ($vendor) {
+                // Get all approved cars for this vendor
+                $approvedCarIds = \Botble\CarRentals\Models\Car::withoutGlobalScopes()
+                    ->where('vendor_id', $vendor->id)
+                    ->where('moderation_status', 'approved')
+                    ->pluck('id');
+
+                $totalCars = $approvedCarIds->count();
+
+                // Calculate average rating across all vendor's approved cars
+                $averageRating = 0;
+                if ($totalCars > 0) {
+                    $totalRating = \Botble\CarRentals\Models\CarReview::whereIn('car_id', $approvedCarIds)
+                        ->where('status', 'published')
+                        ->avg('star');
+                    
+                    $averageRating = $totalRating ? round((float) $totalRating, 1) : 0.0;
+                }
+
+                return [
+                    'id' => $vendor->id,
+                    'name' => $vendor->name,
+                    'avatar' => $vendor->avatar,
+                    'phone' => $vendor->phone,
+                    'email' => $vendor->email,
+                    'location' => $vendor->location_name,
+                    'location_id' => $vendor->location,
+                    'average_rating' => $averageRating,
+                    'total_cars' => $totalCars,
+                ];
+            });
+
+            // Sort by total cars (descending)
+            $sortedVendors = $vendorsWithStats->sortByDesc('total_cars')->values();
+
+            return response()->json([
+                'message' => 'Vendors retrieved successfully!',
+                'vendors' => $sortedVendors,
+                'total_vendors' => $sortedVendors->count(),
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => 'Failed to retrieve vendors',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
 }

@@ -39,6 +39,7 @@ Route::group(['prefix' => 'v1'], function() {
     Route::get('cars', [CarController::class, 'index']);
     Route::get('car/{id}/future-bookings', [BookingController::class, 'getFutureBookingsForCar']);
     Route::get('reviews/{carId}', [ReviewController::class, 'getCarReviews']);
+    Route::get('vendors', [UserController::class, 'getVendors']);
 
 
     Route::middleware('auth:sanctum')->group(function () {
