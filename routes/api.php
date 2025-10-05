@@ -44,6 +44,7 @@ Route::group(['prefix' => 'v1'], function() {
 
     Route::middleware('auth:sanctum')->group(function () {
         Route::post('change-password', [UserController::class, 'changePassword']);
+        Route::post('profile', [UserController::class, 'updateProfile']);
         Route::get('vendor/dashboard-stats', [VendorDashboardController::class, 'dashboardStats']);
         Route::get('vendor/dashboard-recent-bookings', [VendorDashboardController::class, 'recentBookings']);
         Route::get('vendor/dashboard-top-performing-cars', [VendorDashboardController::class, 'topPerformingCars']);

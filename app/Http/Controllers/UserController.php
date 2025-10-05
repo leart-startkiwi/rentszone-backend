@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 use Botble\CarRentals\Models\Customer;
 use Botble\CarRentals\Models\Booking;
 
@@ -203,6 +204,111 @@ class UserController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'message' => 'Failed to retrieve vendors',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function updateProfile(Request $request): JsonResponse
+    {
+        try {
+            // Check if user is authenticated
+            if (!auth('sanctum')->check()) {
+                return response()->json([
+                    'message' => 'Unauthenticated. Please login first.',
+                ], 401);
+            }
+
+            $customer = auth('sanctum')->user();
+
+            // Validate the request
+            $validator = Validator::make($request->all(), [
+                'name' => 'sometimes|required|string|max:255',
+                'email' => 'sometimes|required|email|unique:cr_customers,email,' . $customer->id,
+                'phone' => 'sometimes|nullable|string|max:20',
+                'location' => 'sometimes|nullable|integer|exists:cr_car_addresses,id',
+                'avatar' => 'sometimes|nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'message' => 'Validation failed',
+                    'errors' => $validator->errors(),
+                ], 422);
+            }
+
+            // Update only the provided fields
+            if ($request->has('name')) {
+                $customer->name = $request->input('name');
+            }
+
+            if ($request->has('email')) {
+                $customer->email = $request->input('email');
+            }
+
+            if ($request->has('phone')) {
+                $customer->phone = $request->input('phone');
+            }
+
+            if ($request->has('location')) {
+                $customer->location = $request->input('location');
+            }
+
+            // Handle avatar upload
+            if ($request->hasFile('avatar')) {
+                $file = $request->file('avatar');
+                
+                if ($file->isValid()) {
+                    // Create directory structure: customers/{user_id}/
+                    $directory = 'customers/' . $customer->id;
+                    
+                    // Sanitize filename - remove special characters and spaces
+                    $originalName = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $basename = pathinfo($originalName, PATHINFO_FILENAME);
+                    
+                    // Clean filename: remove spaces, special chars, keep only alphanumeric, dots, hyphens, underscores
+                    $cleanBasename = preg_replace('/[^a-zA-Z0-9._-]/', '_', $basename);
+                    $cleanFilename = 'avatar_' . time() . '_' . $cleanBasename . '.' . $extension;
+                    
+                    // Store file in public disk
+                    $path = $file->storeAs($directory, $cleanFilename, 'public');
+                    
+                    // Store path without /storage/ prefix (exactly like CarController)
+                    $customer->avatar = $path;
+                }
+            }
+
+            $customer->save();
+
+            // Get location name if location was updated
+            $locationName = null;
+            if ($customer->location) {
+                $location = \DB::table('cr_car_addresses')
+                    ->select('detail_address')
+                    ->where('id', $customer->location)
+                    ->first();
+                $locationName = $location ? $location->detail_address : null;
+            }
+
+            return response()->json([
+                'message' => 'Profile updated successfully.',
+                'customer' => [
+                    'id' => $customer->id,
+                    'name' => $customer->name,
+                    'email' => $customer->email,
+                    'phone' => $customer->phone,
+                    'location_id' => $customer->location,
+                    'location_name' => $locationName,
+                    'avatar' => $customer->avatar,
+                    'is_vendor' => $customer->is_vendor,
+                    'updated_at' => $customer->updated_at,
+                ],
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => 'Failed to update profile',
                 'error' => $e->getMessage(),
             ], 500);
         }

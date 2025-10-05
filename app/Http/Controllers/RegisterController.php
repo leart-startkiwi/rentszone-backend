@@ -41,6 +41,12 @@ class RegisterController extends Controller
 
         $customer->confirmed_at = $isEmailVerifyEnabled ? null : Carbon::now();
         $customer->is_vendor = $request->boolean('is_vendor');
+        
+        // Set location if provided
+        if ($request->has('location')) {
+            $customer->location = $request->input('location');
+        }
+        
         $customer->save();
 
         event(new Registered($customer));
