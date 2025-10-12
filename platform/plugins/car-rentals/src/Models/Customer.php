@@ -51,6 +51,7 @@ class Customer extends BaseModel implements
         'balance',
         'bank_info',
         'payout_payment_method',
+        'is_admin',
     ];
 
     protected $hidden = [

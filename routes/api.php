@@ -17,6 +17,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VendorDashboardController;
+use App\Http\Controllers\AdController;
 
 
 Route::group(['prefix' => 'v1'], function() {
@@ -40,6 +41,8 @@ Route::group(['prefix' => 'v1'], function() {
     Route::get('car/{id}/future-bookings', [BookingController::class, 'getFutureBookingsForCar']);
     Route::get('reviews/{carId}', [ReviewController::class, 'getCarReviews']);
     Route::get('vendors', [UserController::class, 'getVendors']);
+    Route::get('ads', [AdController::class, 'index']);
+    Route::get('ads/{id}', [AdController::class, 'show']);
 
 
     Route::middleware('auth:sanctum')->group(function () {
@@ -67,5 +70,10 @@ Route::group(['prefix' => 'v1'], function() {
         Route::patch('bookings/{bookingId}/status', [BookingController::class, 'updateBookingStatus']);
         Route::get('car/{carId}/has-booked', [BookingController::class, 'hasUserBookedCar']);
         Route::delete('account', [UserController::class, 'deleteAccount']);
+        
+        // Ad management routes (protected)
+        Route::post('ads', [AdController::class, 'store']);
+        Route::post('ads/{id}', [AdController::class, 'update']);
+        Route::delete('ads/{id}', [AdController::class, 'destroy']);
     });
 });
